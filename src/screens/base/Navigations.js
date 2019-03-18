@@ -4,9 +4,9 @@ import {
   createStackNavigator
 } from "react-navigation";
 import { Image, StyleSheet } from "react-native";
-import { News } from "../news/News";
+import News from "../news/News";
 import React from "react";
-import { Mine } from "../mine/Mine";
+import Mine from "../mine/Mine";
 const tabBottom = createBottomTabNavigator(
   {
     News: {

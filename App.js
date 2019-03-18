@@ -9,12 +9,22 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import Navigations from "./src/screens/base/Navigations";
-import { News } from "./src/screens/news/News";
-
+import { Provider } from "react-redux";
+import { store, persistor } from "./src/store/configStore";
+import { PersistGate } from "redux-persist/integration/react";
 type Props = {};
 export default class App extends Component<Props> {
+  onBeforeLift = () => {
+    // take some action before the gate lifts
+  };
   render() {
-    return <Navigations />;
+    return (
+      <Provider store={store}>
+        <PersistGate persistor={persistor} loading={this.onBeforeLift()}>
+          <Navigations />
+        </PersistGate>
+      </Provider>
+    );
   }
 }
 

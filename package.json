@@ -7,10 +7,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "immutable": "^4.0.0-rc.12",
     "react": "16.8.3",
     "react-native": "0.59.0",
     "react-native-gesture-handler": "^1.1.0",
-    "react-navigation": "3.0.5"
+    "react-navigation": "3.0.5",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.2",
+    "redux-persist-transform-immutable": "5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

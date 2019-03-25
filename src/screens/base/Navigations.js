@@ -7,6 +7,9 @@ import { Image, StyleSheet } from "react-native";
 import News from "../news/News";
 import React from "react";
 import Mine from "../mine/Mine";
+import Picture from "../picture/Picture";
+import Video from "../video/Video";
+import TopNavigation from "../picture/components/TopNavigation";
 const tabBottom = createBottomTabNavigator(
   {
     News: {
@@ -29,7 +32,7 @@ const tabBottom = createBottomTabNavigator(
       }
     },
     Picture: {
-      screen: News,
+      screen: Picture,
       navigationOptions: {
         header: null,
         tabBarLabel: "图片",
@@ -48,7 +51,7 @@ const tabBottom = createBottomTabNavigator(
       }
     },
     Video: {
-      screen: News,
+      screen: Video,
       navigationOptions: {
         header: null,
         tabBarLabel: "视频",

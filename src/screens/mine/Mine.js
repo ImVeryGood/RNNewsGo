@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Button, Text, Image, StyleSheet } from "react-native";
+import { View, Button, Text, Image, StyleSheet, FlatList } from "react-native";
 import { bindActionCreators } from "redux";
 import index_action from "../../action/index_action";
-import connect from "react-redux/es/connect/connect";
+import { connect } from "react-redux";
 
 export class Mine extends React.Component {
   constructor(props) {
@@ -10,11 +10,7 @@ export class Mine extends React.Component {
   }
 
   render() {
-    return (
-      <View>
-        <Text>mine</Text>
-      </View>
-    );
+    return <View />;
   }
 }
 

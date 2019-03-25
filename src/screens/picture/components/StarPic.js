@@ -1,22 +1,27 @@
+import { View, Text } from "react-native";
 import React from "react";
-import { View, Button, Text, Image, StyleSheet } from "react-native";
 import { bindActionCreators } from "redux";
-import index_action from "../../action/index_action";
+import index_action from "../../../action/index_action";
 import { connect } from "react-redux";
+import PictureListComponent from "./PictureListComponent";
 
-class Video extends React.Component {
+class StarPic extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <View />;
+    const { star } = this.props;
+    return (
+      <View>
+        <PictureListComponent data={star} />
+      </View>
+    );
   }
 }
 
-const styles = StyleSheet.create({});
 const mapStateToProps = state => {
-  return {};
+  return { star: state.picture_reducer.get("star") };
 };
 const mapDispatchToProps = dispatch => {
   return {
@@ -26,4 +31,4 @@ const mapDispatchToProps = dispatch => {
 module.exports = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Video);
+)(StarPic);

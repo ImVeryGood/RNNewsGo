@@ -1,20 +1,23 @@
+import { View, Text } from "react-native";
 import React from "react";
-import { View, Button, Text, Image, StyleSheet } from "react-native";
 import { bindActionCreators } from "redux";
-import index_action from "../../action/index_action";
+import index_action from "../../../action/index_action";
 import { connect } from "react-redux";
 
-class Video extends React.Component {
+class PicDetail extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return <View />;
+    return (
+      <View>
+        <Text>PicDetail</Text>
+      </View>
+    );
   }
 }
 
-const styles = StyleSheet.create({});
 const mapStateToProps = state => {
   return {};
 };
@@ -26,4 +29,4 @@ const mapDispatchToProps = dispatch => {
 module.exports = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Video);
+)(PicDetail);
